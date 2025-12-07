@@ -43,7 +43,7 @@
             <div><img src="icons/no.svg" class="t2" alt=""> transphobes dni :3c </div>
             <div>
                 <h2>Aki 19F<span class="sub"> (she/they)</span></h2>
-                <img src="me.jpg" width="100" style="position: absolute; translate: -100% 0; margin-left: -1em; border-radius: 4px;">
+                <img id="me" src="me.jpg" width="100" style="position: absolute; translate: -100% 0; margin-left: -1em; border-radius: 4px;">
                 <div>
                     Hai!! I'm a gay creature with undiagnosed autism (for now).
                     I&nbsp;study Computer Science and enjoy doing silly stuff in my free time.
@@ -220,8 +220,11 @@
         }
 
         @media only screen and (max-width: 600px) {
-            #mizu {
+            #mizu, #me {
                 display: none !important;
+            }
+            #main {
+                width: 90%;
             }
         }
 
