@@ -1,0 +1,74 @@
+function formatSpotifyTitle(artist, song) {
+    const MAX_LENGTH = 15;
+
+    song = song.replace(/\s*\(feat\..*?\)/i, '');
+
+    let fullTitle = `${artist} • ${song}`.trim();
+    if (fullTitle.length > MAX_LENGTH) {
+        fullTitle = song;
+    }
+
+    return fullTitle;
+}
+
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours() % 12;
+    const minutes = now.getMinutes();
+
+    const hourDeg = (360 / 12) * hours + (30 * (minutes / 60));
+    const minuteDeg = (360 / 60) * minutes;
+
+    document.getElementById("hour-hand").setAttribute("transform", `rotate(${hourDeg} 12 12)`);
+    document.getElementById("minute-hand").setAttribute("transform", `rotate(${minuteDeg - 90} 12 12)`);
+}
+
+function classifyWeather(weatherData) {
+    const rain = parseFloat(weatherData.suma_opadu);
+    const humidity = parseFloat(weatherData.wilgotnosc_wzgledna);
+
+    if (rain > 5) return "rain";
+    if (humidity >= 80) return "cloudy";
+    return "sunny";
+}
+
+async function init_menu_info() {
+    const weather = document.getElementById('weather_value');
+    const weatherData = await fetch("https://danepubliczne.imgw.pl/api/data/synop/station/warszawa")
+        .then((res) => res.json());
+
+    weather.innerText = weatherData.temperatura + "°C";
+    
+    const weatherIcon = document.getElementById('weather_icon');
+    weatherIcon.src = "icons/weather_" + classifyWeather(weatherData) + ".svg";
+    weatherIcon.alt = "Weather icon";
+
+    const time = document.getElementById('time_value');
+    time.innerText = new Date().toTimeString().slice(0, 8);
+    setInterval(() => time.innerText = new Date().toTimeString().slice(0, 8), 1000);
+
+    const spotify = document.getElementById('spotify_value');
+    const spotifyCover = document.getElementById('spotify_cover');
+    const spotifyLink = document.getElementById('spotify_link');
+
+    await fetch("https://api.lanyard.rest/v1/users/344491989691269151")
+        .then((res) => res.json())
+        .then((res) => {
+            const spotifyData = res.data.spotify;
+
+            if (spotifyData) {
+                spotifyCover.src = spotifyData.album_art_url;
+                spotifyCover.alt = "Cover of " + spotifyData.artist + " • " + spotifyData.song
+                spotify.innerText = formatSpotifyTitle(spotifyData.artist, spotifyData.song);
+                spotifyLink.href = "https://open.spotify.com/track/" + spotifyData.track_id;
+            } else {
+                spotify.innerText = "-- • --"
+                spotifyLink.classList.remove("hover:underline");
+            }
+        });
+
+    updateClock();
+    setInterval(updateClock, 60 * 1000); // Update every minute
+}
+
+init_menu_info()

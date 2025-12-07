@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akinom.dev</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="grid"></canvas>
+
+    <section id="main">
+
+        <div id="info">
+            <div id="weather" title="Weather in Warsaw">
+                <img id="weather_icon" src="" alt="" class="h-5" />
+                <span id="weather_value">█ ██°C</span>
+            </div>
+            <a id="spotify_link" title="Listening to...">
+                <img id="spotify_cover" alt="" src="" class="h-5" />
+                <span id="spotify_value">██████ • ██████</span>
+            </a>
+            <div id="time">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3-icon lucide-clock-3">
+                    <line id="hour-hand" x1="12" y1="12" x2="12" y2="8"/>
+                    <line id="minute-hand" x1="12" y1="12" x2="16" y2="12"/>
+                    <circle cx="12" cy="12" r="8"/>
+                </svg>
+                <span id="time_value">██:██:██</span>
+            </div>
+        </div>
+
+        <h1>aki's cool website</h1>
+        <p class="sub" id="splash">this is a subtitle</p>
+
+        <div class="separator"></div>
+
+        <div id="content">
+            <div><img src="icons/no.svg" class="t2" alt=""> transphobes dni :3c </div>
+            <div>
+                <h2>Aki 19F<span class="sub"> (she/they)</span></h2>
+                <img src="me.jpg" width="100" style="position: absolute; translate: -100% 0; margin-left: -1em; border-radius: 4px;">
+                <div>
+                    Hai!! I'm a gay creature with undiagnosed autism (for now).
+                    I&nbsp;study Computer Science and enjoy doing silly stuff in my free time.
+                    You can also find me under the name Monika!
+                </div>
+            </div>
+            <div id="pride">
+                <img title="Pansexual" src="flags/pan.png" alt="">
+                <img title="Transgender" src="flags/trans.png" alt="">
+                <img title="Nonbinary" src="flags/nb.png" alt="">
+            </div>
+            <div>
+                <h3>my socials!!!</h3>
+                <div id="socials" class="border">
+                    <a target="_blank" id="github" href="https://github.com/CheryX"><img src="socials/github.svg" alt="GitHub" title="@CheryX"></a>
+                    <a target="_blank" id="twitter" href="https://x.com/aki_akinom"><img src="socials/twitter.svg" alt="Twitter" title="@aki_akinom"></a>
+                    <a target="_blank" id="spotify" href="https://open.spotify.com/user/xskys"><img src="socials/spotify.svg" alt="Spotify" title="@xskys"></a>
+                    <a target="_blank" id="instagram" href="https://www.instagram.com/akiakimon__/"><img src="socials/instagram.svg" alt="Instagram" title="@akiakimon__"></a>
+                    <a target="_blank" id="discord" href="https://discord.com/users/344491989691269151"><img src="socials/discord.svg" alt="Discord" title="@cheryx"></a>
+                    <a target="_blank" id="steam" href="https://steamcommunity.com/id/cheryx/"><img src="socials/steam.svg" alt="Steam" title="@cheryx"></a>
+                </div>
+            </div>
+            <div id="mizu">
+                <img src="mizuki-akiyama.gif" alt="Mizuki Akiyama">mizuki akiyama. x3
+            </div>
+            <div style="text-align: end;">
+                <h3>cool songs <img src="icons/music.svg" class="t4" alt=""></h3>
+                <div id="spotify_list">
+                    <a href="https://open.spotify.com/track/4MOfm19a8JZvAEfcWJLGXV"><img src="covers/1.jpg" alt="">化けの花</a>
+                    <a href="https://open.spotify.com/track/68peSN0i1B7SKhGkCWgeGH"><img src="covers/4.jpg" alt="">熱異常</a>
+                    <a href="https://open.spotify.com/track/5dptcPc81FCiyCPsNvl0qu"><img src="covers/2.jpg" alt="">GIRL HELL 1999</a>
+                    <a href="https://open.spotify.com/track/6RyCpAEHMj1nbopw1g2TsO"><img src="covers/3.jpg" alt="">FUKOUNA GIRL</a>
+                </div>
+            </div>
+            <div>
+                <h3><img src="icons/game.svg" class="t4" alt=""> video gaymes I like:</h3>
+                <div class="border" id="gamerow">
+                    <img src="games/genshin.png" height="32" alt="Genshin Impact" title="Genshin Impact">
+                    <img src="games/mc.png" height="32" alt="Minecraft" title="Minecraft">
+                    <img src="games/celeste.jpg" height="32" alt="Celeste" title="Celeste">
+                    <img src="games/cs2.jpg" height="32" alt="Cities: Skylines II" title="Cities: Skylines II">
+                    <img src="games/factorio.jpg" height="32" alt="Factorio" title="Factorio">
+                    <img src="games/pjsk.webp" height="32" alt="Projekt Sekai" title="Projekt Sekai">
+                </div>
+            </div>
+            <div id="hrt" title="Days since 2025/02/03">
+                <span>on hrt since:</span>
+                <span id="hrt_timer">█y ██m ██d</span>
+            </div>
+            <div id="likes">
+                <h3 style="text-align: center;"><img src="icons/star.svg" class="t4" alt=""> cool stuff:</h3>
+                <ul> 
+                    <li>trams</li>
+                    <li>trains</li>
+                    <li>public transit</li>
+                    <li>rails</li>
+                    <li>being railed</li>
+                    <li>maps</li>
+                    <li>knots</li>
+                    <li>board games</li>
+                    <li>vocaloid</li>
+                    <li>rhythm games</li>
+                    <li>d&d</li>
+                    <li>bikes</li>
+                    <li>programming</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="perlin.js"></script>
+    <script src="background.js"></script>
+    <script src="splash_texts.js"></script>
+    <script src="menu_info.js"></script>
+    <script src="timer.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+
+            font-family: "Funnel Display", sans-serif;
+
+        }
+
+        #main {
+            width: 512px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #grid {
+            position: absolute;
+            width: 100vw;
+            height: 100svh;
+            background-color: #111;
+            z-index: -1;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .separator {
+            width: 100%;
+            height: 40px;
+            background-image: url("pattern.svg");
+            background-size: 40px;
+            background-position: center;
+        }
+
+        .sub {
+            opacity: 0.6;
+            font-size: 12pt;
+            font-weight: 400;
+            text-align: center;
+            margin: .5em;
+        }
+        
+        #info {
+            font-family: "JetBrains Mono", monospace;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1em;
+            margin: 1em 0;
+        }
+
+        #info > div, #info > a {
+            padding: .4em;
+            border: 2px #ffffff50 solid;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            gap: .3em;
+            color: white;
+        }
+
+        #info > #spotify {
+            flex-grow: 2;
+        }
+
+        #spotify_cover {
+            height: 1.4em;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        } 
+
+        a[href*="."]:hover {
+            text-decoration: underline;
+        }
+        
+        #content {
+            column-count: 2;
+            column-gap: 1em;
+            margin-top: .5em;
+            width: 100%;
+        }
+
+        #content > div {
+            break-inside: avoid;
+            margin-bottom: 1em;
+            line-height: 1.4;
+        }
+
+        h2, h3 {
+            margin: .2em 0;
+        }
+
+        h3 {
+            font-weight: 500;
+        }
+
+        .border {
+            padding: .4em;
+            border: 2px #ffffff50 solid;
+            border-radius: 4px;
+        }
+
+        .t2 { translate: 0 2px; }
+        .t4 { translate: 0 4px; }
+
+        #gamerow {
+            display: flex; gap: .4em; justify-content: space-around;
+        }
+
+        #gamerow > * {
+            border-radius: 2px;
+        }
+
+        #spotify_list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            gap: .5em 1.5em;
+            margin-top: .5em;
+        }
+
+        #spotify_list > a {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: .5em;
+        }
+
+        #spotify_list > a > img {
+            height: 2em;
+            border-radius: 4px;
+        }
+
+        #pride {
+            display: flex;
+            gap: 4px;
+        }
+
+        #pride > * {
+            height: 1.3em;
+            border-radius: 4px;
+            border: 2px #ffffff50 solid;
+        }
+
+        #likes > ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: square;
+            gap: .5em;
+            list-style-position: inside;
+            margin: .5em 0 0 0;
+            padding: 0;
+            line-height: 1;
+            justify-content: center;
+        }
+
+        #likes > ul > li:first-child {
+            list-style-type: none;
+        }
+
+        #hrt {
+            display: flex;
+            background-color: #b45309;
+            color: #fde68a;
+            border: 2px dashed #fde68a; 
+            padding: .5em;
+            font-weight: 900;
+            font-family: "JetBrains Mono", monospace;
+            border-radius: 4px;
+            justify-content: space-around;
+        }
+
+        #socials {
+            display: flex; gap: .4em; justify-content: space-around;
+        }
+
+        #socials > a > img {
+            height: 1.5em;
+        }
+
+        #socials > a {
+            height: 2em;
+            width: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        #steam {
+            background-color: #000000;
+        }
+
+        #discord {
+            background-color: #5865F2;
+        }
+
+        #instagram {
+            background: linear-gradient(-15deg, #f9ce34, #ee2a7b, #6228d7);
+        }
+
+        #spotify {
+            background-color: #1ED760;
+        }
+
+        #github {
+            background-color: #181717;
+        }
+
+        #twitter {
+            background-color: #1d9bf0;
+        }
+
+        #twitter > img {
+            scale: 0.8;
+        }
+
+        #mizu > img {
+            border-radius: 2px;
+            display: block;
+            aspect-ratio: 7/3;
+            width: 100%;
+        }
+
+    </style>
+</body>
+</html>
