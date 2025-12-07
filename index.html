@@ -133,7 +133,7 @@
         }
 
         #main {
-            width: 512px;
+            max-width: 512px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -208,10 +208,15 @@
         }
         
         #content {
-            column-count: 2;
             column-gap: 1em;
             margin-top: .5em;
             width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+            #content {
+                column-count: 2;
+            }
         }
 
         #content > div {
