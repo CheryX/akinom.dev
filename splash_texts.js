@@ -7,7 +7,9 @@ const subtitles = [
     "why do i share my spotify status up there? idk", "roll the katamari!!!", "update: mafuyu is now my twin",
     "blahajs power or something idk", "why are you here.", "update: update: i think mizuki is again my twin",
     "mizuena my beloved :3", "random cs student", "i am so dead inside", "domainn update!!!!", "updated this website",
-    "just monika.", "arf", "hello random person visiting this website for uni purposes"
+    "just monika.", "arf", "hello random person visiting this website for uni purposes",
+    "i love my beautiful fox wife", "i habe a  lovely wife :3c", "those meds rellly kicked in",
+    "I GOT FUCKN DIAGNOSED!!!", "certified adhd & autism"
 ]
 
 function isBirthday() {
@@ -17,11 +19,24 @@ function isBirthday() {
 
 }
 
+function isHRTBrithday() {
+
+    const today = new Date()
+    return today.getMonth() == 1 && today.getDate() == 3
+
+}
+
+
 function shuffleSubtitle() {
     let newSubtitle;
 
     if (isBirthday()) {
         subtitle.innerText = "🎂 it's my birthday :3";
+        return;
+    }
+
+    if (isHRTBrithday()) {
+        subtitle.innerText = "🎂 hrt anniversary :3c";
         return;
     }
 
