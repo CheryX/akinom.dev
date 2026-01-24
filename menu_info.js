@@ -63,6 +63,7 @@ async function init_menu_info() {
                 spotifyCover.alt = "Cover of " + spotifyData.artist + " • " + spotifyData.song
                 spotify.innerText = formatSpotifyTitle(spotifyData.artist, spotifyData.song);
                 spotifyLink.href = "https://open.spotify.com/track/" + spotifyData.track_id;
+                spotifyLink.title = "Listening to " + spotifyData.artist + " - " + spotifyData.song;
             } else {
                 spotify.innerText = "• ----"
                 spotifyLink.classList.remove("hover:underline");
