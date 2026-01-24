@@ -390,7 +390,7 @@ h3 {
 #mizu > img {
     border-radius: 2px;
     display: block;
-    aspect-ratio: 7/3;
+    aspect-ratio: 5/3;
     width: 100%;
 }
 
