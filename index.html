@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -56,9 +57,9 @@
             <div><img src="icons/no.svg" class="t2" alt=""> transphobes & Olaf dni :3c </div>
             <div>
                 <h2>Aki 19F<span class="sub"> (she/they)</span></h2>
-                <div style="position: absolute; translate: -100% 0; margin-left: -1em; border: 2px solid #444; border-radius: 4px; display: flex; flex-direction: column;">
-                    <img id="me" style="border-radius: 2px 2px 0 0;" src="https://gitlab.com/uploads/-/system/user/avatar/32689323/avatar.png" width="100">
-                    <span style="background-color: #222; padding: 0.5em 0; text-align: center; border-radius: 0 0 2px 2px;">aki & train</span>
+                <div id="me">
+                    <img src="https://gitlab.com/uploads/-/system/user/avatar/32689323/avatar.png" width="100">
+                    <span>aki & train</span>
                 </div>
                 <div>
                     Hai!! I'm a gay creature with autism.
@@ -85,7 +86,7 @@
             <div id="mizu">
                 <img src="mizuki-akiyama.gif" alt="Mizuki Akiyama">mizuki akiyama. x3
             </div>
-            <div style="text-align: end;">
+            <div id="music">
                 <h3>cool songs <img src="icons/music.svg" class="t4" alt=""></h3>
                 <div id="spotify_list">
                     <a href="https://open.spotify.com/track/4MOfm19a8JZvAEfcWJLGXV"><img src="covers/1.jpg" alt="">化けの花</a>
@@ -110,8 +111,8 @@
                 <span id="hrt_timer">█y ██m ██d</span>
             </div>
             <div id="likes">
-                <h3 style="text-align: center;"><img src="icons/star.svg" class="t4" alt=""> cool stuff:</h3>
-                <ul> 
+                <h3><img src="icons/star.svg" class="t4" alt=""> cool stuff:</h3>
+                <ul>  
                     <li>trams</li>
                     <li>trains</li>
                     <li>public transit</li>
@@ -131,261 +132,18 @@
 
     </section>
 
+    <a id="spiral" target="_blank" href="https://limbo.akinom.dev/">
+        <span>Limbo the file explorer</span>
+    </a>
+
     <script src="perlin.js"></script>
     <script src="background.js"></script>
     <script src="splash_texts.js"></script>
     <script src="menu_info.js"></script>
     <script src="timer.js"></script>
+    <script src="spiral.js"></script>
 
 
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-
-            font-family: "Funnel Display", sans-serif;
-
-        }
-
-        #main {
-            max-width: 512px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #grid {
-            position: absolute;
-            width: 100vw;
-            height: 100svh;
-            background-color: #111;
-            z-index: -1;
-        }
-
-        h1 {
-            margin: 0;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        .separator {
-            width: 100%;
-            height: 40px;
-            background-image: url("pattern.svg");
-            background-size: 40px;
-            background-position: center;
-        }
-
-        .sub {
-            opacity: 0.6;
-            font-size: 12pt;
-            font-weight: 400;
-            text-align: center;
-            margin: .5em;
-        }
-        
-        #info {
-            font-family: "JetBrains Mono", monospace;
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            gap: 1em;
-            margin: 1em 0;
-        }
-
-        #info > div, #info > a {
-            padding: .4em;
-            border: 2px #ffffff50 solid;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-            gap: .3em;
-            color: white;
-        }
-
-        #info > #spotify {
-            flex-grow: 2;
-        }
-
-        #spotify_cover {
-            height: 1.4em;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        } 
-
-        a[href*="."]:hover {
-            text-decoration: underline;
-        }
-        
-        #content {
-            column-gap: 1em;
-            margin-top: .5em;
-            width: 100%;
-        }
-
-        @media only screen and (min-width: 600px) {
-            #content {
-                column-count: 2;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            #mizu, #me {
-                display: none !important;
-            }
-            #main {
-                width: 90%;
-            }
-        }
-
-        #content > div {
-            break-inside: avoid;
-            margin-bottom: 1em;
-            line-height: 1.4;
-        }
-
-        h2, h3 {
-            margin: .2em 0;
-        }
-
-        h3 {
-            font-weight: 500;
-        }
-
-        .border {
-            padding: .4em;
-            border: 2px #ffffff50 solid;
-            border-radius: 4px;
-        }
-
-        .t2 { translate: 0 2px; }
-        .t4 { translate: 0 4px; }
-
-        #gamerow {
-            display: flex; gap: .4em; justify-content: space-around;
-        }
-
-        #gamerow > * {
-            border-radius: 2px;
-        }
-
-        #spotify_list {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-            gap: .5em 1.5em;
-            margin-top: .5em;
-        }
-
-        #spotify_list > a {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: .5em;
-        }
-
-        #spotify_list > a > img {
-            height: 2em;
-            border-radius: 4px;
-        }
-
-        #pride {
-            display: flex;
-            gap: 4px;
-        }
-
-        #pride > * {
-            height: 1.3em;
-            border-radius: 4px;
-            border: 2px #ffffff50 solid;
-        }
-
-        #likes > ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: square;
-            gap: .5em;
-            list-style-position: inside;
-            margin: .5em 0 0 0;
-            padding: 0;
-            line-height: 1;
-            justify-content: center;
-        }
-
-        #likes > ul > li:first-child {
-            list-style-type: none;
-        }
-
-        #hrt {
-            display: flex;
-            background-color: #b45309;
-            color: #fde68a;
-            border: 2px dashed #fde68a; 
-            padding: .5em;
-            font-weight: 900;
-            font-family: "JetBrains Mono", monospace;
-            border-radius: 4px;
-            justify-content: space-around;
-        }
-
-        #socials {
-            display: flex; gap: .4em; justify-content: space-around;
-        }
-
-        #socials > a > img {
-            height: 1.5em;
-        }
-
-        #socials > a {
-            height: 2em;
-            width: 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 4px;
-        }
-
-        #steam {
-            background-color: #000000;
-        }
-
-        #discord {
-            background-color: #5865F2;
-        }
-
-        #instagram {
-            background: linear-gradient(-15deg, #f9ce34, #ee2a7b, #6228d7);
-        }
-
-        #spotify {
-            background-color: #1ED760;
-        }
-
-        #github {
-            background-color: #181717;
-        }
-
-        #twitter {
-            background-color: #1d9bf0;
-        }
-
-        #twitter > img {
-            scale: 0.8;
-        }
-
-        #mizu > img {
-            border-radius: 2px;
-            display: block;
-            aspect-ratio: 7/3;
-            width: 100%;
-        }
-
-    </style>
+    
 </body>
 </html>

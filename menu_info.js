@@ -62,7 +62,7 @@ async function init_menu_info() {
                 spotify.innerText = formatSpotifyTitle(spotifyData.artist, spotifyData.song);
                 spotifyLink.href = "https://open.spotify.com/track/" + spotifyData.track_id;
             } else {
-                spotify.innerText = "-- • --"
+                spotify.innerText = "• ----"
                 spotifyLink.classList.remove("hover:underline");
             }
         });
