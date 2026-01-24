@@ -1,11 +1,15 @@
 function formatSpotifyTitle(artist, song) {
-    const MAX_LENGTH = 15;
+    const MAX_LENGTH = 20;
 
     song = song.replace(/\s*\(feat\..*?\)/i, '');
 
     let fullTitle = `${artist} • ${song}`.trim();
+    
     if (fullTitle.length > MAX_LENGTH) {
-        fullTitle = song;
+        if (song.length > MAX_LENGTH) {
+            return song.slice(0, MAX_LENGTH - 1) + "…";
+        }
+        return song;
     }
 
     return fullTitle;
