@@ -225,11 +225,14 @@ h3 {
 .t4 { translate: 0 4px; }
 
 #gamerow {
-    display: flex; gap: .4em; justify-content: space-around;
+    display: flex;
+    gap: .4em;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #gamerow > * {
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 #spotify_list {
