@@ -16,17 +16,20 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(142, 81, 255);
+    color: hsl(261, 100%, 90%);
     border: 2px solid rgb(142, 81, 255);
     font-weight: 600;
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, letter-spacing 0.3s;
 }
 
 #spiral:hover {
     background-color: white;
     border-color: white;
+    color: white;
+    letter-spacing: 0.5px;
 }
 
 #main {

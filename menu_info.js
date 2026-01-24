@@ -77,8 +77,12 @@ async function init_menu_info() {
                 }
             }
 
-            if (splash && custom && custom.state) {
-                splash.innerText = custom.state;
+            if (splash) {
+                if (custom && custom.state) {
+                    splash.innerText = custom.state;
+                } else {
+                    shuffleSubtitle();
+                }
             }
         });
 

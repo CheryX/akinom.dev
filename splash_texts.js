@@ -48,7 +48,7 @@ function shuffleSubtitle() {
     subtitle.innerText = newSubtitle;
 }
 
-shuffleSubtitle();
+// shuffleSubtitle();
 
 const shuffleButton = document.getElementById('shuffle_button');
 shuffleButton.addEventListener('click', () => shuffleSubtitle());
