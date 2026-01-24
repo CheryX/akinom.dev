@@ -50,6 +50,8 @@ async function init_menu_info() {
     const spotify = document.getElementById('spotify_value');
     const spotifyCover = document.getElementById('spotify_cover');
     const spotifyLink = document.getElementById('spotify_link');
+    const statusVal = document.getElementById('status');
+    const splash = document.getElementById('splash');
 
     await fetch("https://api.lanyard.rest/v1/users/344491989691269151")
         .then((res) => res.json())
@@ -64,6 +66,19 @@ async function init_menu_info() {
             } else {
                 spotify.innerText = "• ----"
                 spotifyLink.classList.remove("hover:underline");
+            }
+
+            const status = res.data.discord_status;
+            const custom = res.data.activities.find(a => a.type === 4);
+
+            if (statusVal) {
+                if (status === 'dnd') {
+                    statusVal.innerHTML = '<span class="status-dot"></span> Busy';
+                }
+            }
+
+            if (splash && custom && custom.state) {
+                splash.innerText = custom.state;
             }
         });
 

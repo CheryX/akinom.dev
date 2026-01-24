@@ -4,6 +4,7 @@ body {
     color: white;
 
     font-family: "Funnel Sans", sans-serif;
+    cursor: default;
 
 }
 
@@ -71,6 +72,7 @@ h1 {
     font-size: 12pt;
     font-weight: 400;
     text-align: center;
+    text-wrap: balance;
     margin: .5em;
 }
 
@@ -166,6 +168,19 @@ a[href*="."]:hover {
     #main, #spiral {
         width: 90%;
     }
+
+    #info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "spotify spotify"
+            "weather time";
+        gap: 0.5em;
+    }
+
+    #spotify_link { grid-area: spotify; }
+    #weather { grid-area: weather; }
+    #time { grid-area: time; }
 }
 
 @media only screen and (max-width: 750px) {
@@ -230,12 +245,28 @@ h3 {
 #pride {
     display: flex;
     gap: 4px;
+    align-items: center;
 }
 
-#pride > * {
+#pride > img {
     height: 1.3em;
     border-radius: 4px;
+    background-color: #ffffff20;
     border: 2px #ffffff50 solid;
+}
+
+#pride > .sep {
+    margin-left: auto;
+}
+
+.status-dot {
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    background-color: #ef4444;
+    border-radius: 50%;
+    margin-right: .1em;
+    transform: translateY(-1px);
 }
 
 #likes > ul {
