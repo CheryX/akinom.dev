@@ -6,6 +6,10 @@ function formatSpotifyTitle(artist, song) {
     let fullTitle = `${artist} • ${song}`.trim();
     
     if (fullTitle.length > MAX_LENGTH) {
+        const allowedArtist = MAX_LENGTH - song.length - 3;
+        if (allowedArtist > 3) {
+            return `${artist.slice(0, allowedArtist)}... • ${song}`;
+        }
         if (song.length > MAX_LENGTH) {
             return song.slice(0, MAX_LENGTH - 1) + "…";
         }
