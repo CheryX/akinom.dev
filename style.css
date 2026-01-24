@@ -83,14 +83,14 @@ h1 {
 
 #shuffle_button {
     position: absolute;
-    right: 0;
+    right: -10px;
     background: transparent;
     border: none;
     color: inherit;
     opacity: 0.2;
     cursor: pointer;
     transition: opacity 0.2s, transform 0.2s;
-    padding: 0;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
