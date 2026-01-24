@@ -160,11 +160,17 @@ a[href*="."]:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    #mizu, #me {
+    #mizu {
         display: none !important;
     }
     #main, #spiral {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #me {
+        display: none !important;
     }
 }
 
@@ -343,6 +349,29 @@ h3 {
     border-radius: 0 0 2px 2px;
 }
 
+#me_shuffle {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#me:hover #me_shuffle {
+    opacity: 1;
+}
+
+#me_shuffle img {
+    width: 12px;
+    height: 12px;
+}
+
 #spiral:hover {
     text-decoration: none;
 }
@@ -361,4 +390,9 @@ h3 {
     background-color: black;
     padding: 1em 1.6em;
     border-radius: 4px;
+}
+
+.hover-char {
+    position: relative;
+    transition: color 0.15s ease-out;
 }

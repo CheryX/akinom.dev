@@ -1,26 +1,20 @@
 
-const style = document.createElement('style');
-style.textContent = `
-    .hover-char {
-        position: relative;
-        transition: top 0.1s;
-    }
-`;
-document.head.appendChild(style);
-
 document.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('hover-char')) {
         const target = e.target;
-        target.style.top = '-1px';
+        target.style.top = '1px';
+        target.style.color = 'hsl(261, 100%, 80%)';
         
         const prev = target.previousElementSibling;
         if (prev && prev.classList.contains('hover-char')) {
-            prev.style.top = '-0.5px';
+            prev.style.top = '0.5px';
+            prev.style.color = 'hsl(261, 100%, 90%)';
         }
         
         const next = target.nextElementSibling;
         if (next && next.classList.contains('hover-char')) {
-            next.style.top = '-0.5px';
+            next.style.top = '0.5px';
+            next.style.color = 'hsl(261, 100%, 90%)';
         }
     }
 });
@@ -29,15 +23,18 @@ document.addEventListener('mouseout', (e) => {
     if (e.target.classList.contains('hover-char')) {
         const target = e.target;
         target.style.top = '';
+        target.style.color = '';
         
         const prev = target.previousElementSibling;
         if (prev && prev.classList.contains('hover-char')) {
             prev.style.top = '';
+            prev.style.color = '';
         }
         
         const next = target.nextElementSibling;
         if (next && next.classList.contains('hover-char')) {
             next.style.top = '';
+            next.style.color = '';
         }
     }
 });
@@ -74,4 +71,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const spiral = document.getElementById('spiral');
     if (spiral) wrapCharacters(spiral);
 });
-
