@@ -3,7 +3,7 @@ body {
     background-color: black;
     color: white;
 
-    font-family: "Funnel Display", sans-serif;
+    font-family: "Funnel Sans", sans-serif;
 
 }
 
@@ -47,6 +47,7 @@ h1 {
     margin: 0;
     text-align: center;
     font-weight: 500;
+    font-family: "Funnel Display", sans-serif;
 }
 
 @keyframes wave {
@@ -139,6 +140,7 @@ a[href*="."]:hover {
 }
 
 h2, h3 {
+    font-family: "Funnel Display", sans-serif;
     margin: .2em 0;
 }
 
@@ -166,14 +168,15 @@ h3 {
 #spotify_list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
-    gap: .5em 1.5em;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: .5em 1em;
     margin-top: .5em;
 }
 
 #spotify_list > a {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     gap: .5em;
 }
@@ -303,6 +306,10 @@ h3 {
     padding: 0.5em 0;
     text-align: center;
     border-radius: 0 0 2px 2px;
+}
+
+#spiral:hover {
+    text-decoration: none;
 }
 
 #music {
