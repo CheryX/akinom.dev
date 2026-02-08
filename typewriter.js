@@ -40,7 +40,7 @@ document.addEventListener('mouseout', (e) => {
 });
 
 function wrapCharacters(element) {
-    if (['weather_value', 'spotify_value', 'time_value', 'hrt_timer'].includes(element.id)) return;
+    if (['weather_value', 'spotify_value', 'time_value', 'hrt_timer', 'hrt'].includes(element.id)) return;
 
     if (element.hasChildNodes()) {
         Array.from(element.childNodes).forEach(child => {
