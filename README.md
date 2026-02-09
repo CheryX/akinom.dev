@@ -6,5 +6,4 @@ My name's Aki.
 - Vocaloid is my favourite music genre! 🎵
 - Doing random coding projects 🌸
 - Enjoying playing autistic video games 🎮
-- Uses macOS. 🍎
 - you know who i am :3c
