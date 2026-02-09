@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>akinom.dev</title>
+    <meta name="description" content="Aki's personal website. :3c">
+    <meta name="keywords" content="developer, personal website">
+    <meta name="author" content="Aki">
+
+    <meta property="og:title" content="Aki" />
+    <meta property="og:description" content="Aki's personal website. :3c" />
+    <meta property="og:url" content="https://akinom.dev" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aki" />
+    <meta name="twitter:description" content="Aki's personal website. :3c" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <canvas id="grid"></canvas>
+
+    <section id="main">
+
+        <div id="info">
+            <div id="weather" title="Weather in Warsaw">
+                <img id="weather_icon" src="" alt="" class="h-5" />
+                <span id="weather_value">█ ██°C</span>
+            </div>
+            <a id="spotify_link" title="Listening to...">
+                <img id="spotify_cover" alt="" src="" class="h-5" />
+                <span id="spotify_value">██ ██████</span>
+            </a>
+            <div id="time">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3-icon lucide-clock-3">
+                    <line id="hour-hand" x1="12" y1="12" x2="12" y2="8"/>
+                    <line id="minute-hand" x1="12" y1="12" x2="16" y2="12"/>
+                    <circle cx="12" cy="12" r="8"/>
+                </svg>
+                <span id="time_value">██:██:██</span>
+            </div>
+        </div>
+
+        <h1>aki's cool website</h1>
+        <div class="splash-container">
+            <p class="sub" id="splash">█████████</p>
+            <button id="shuffle_button" title="Shuffle"><img src="icons/shuffle.svg" alt="Shuffle"></button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div id="content">
+            <div><img src="icons/no.svg" class="t2" alt=""> transphobes & Olaf dni :3c </div>
+            <div>
+                <h2>Aki 19F<span class="sub"> (she/they)</span></h2>
+                <div id="me">
+                    <button id="me_shuffle" title="Shuffle"><img src="icons/shuffle.svg" alt="Shuffle"></button>
+                    <img src="me/train.png" width="100" alt="Aki & train">
+                    <span>aki & train</span>
+                </div>
+                <div>
+                    Hai!! I'm a gay creature with autism.
+                    I&nbsp;study Computer Science and enjoy doing silly stuff in my free time.
+                    You can also find me under the name Monika!
+                </div>
+            </div>
+            <div id="pride">
+                <img title="Pansexual" src="flags/pan.png" alt="">
+                <img title="Transgender" src="flags/trans.png" alt="">
+                <img title="Nonbinary" src="flags/nb.png" alt="">
+                <span class="sep"></span>
+                <div id="status"></div>
+            </div>
+            <div>
+                <h3>my socials!!!</h3>
+                <div id="socials" class="border">
+                    <a target="_blank" id="github" href="https://github.com/CheryX"><img src="socials/github.svg" alt="GitHub" title="@CheryX"></a>
+                    <a target="_blank" id="twitter" href="https://x.com/aki_akinom"><img src="socials/twitter.svg" alt="Twitter" title="@aki_akinom"></a>
+                    <a target="_blank" id="spotify" href="https://open.spotify.com/user/xskys"><img src="socials/spotify.svg" alt="Spotify" title="@xskys"></a>
+                    <a target="_blank" id="instagram" href="https://www.instagram.com/akiakimon__/"><img src="socials/instagram.svg" alt="Instagram" title="@akiakimon__"></a>
+                    <a target="_blank" id="discord" href="https://discord.com/users/344491989691269151"><img src="socials/discord.svg" alt="Discord" title="@cheryx"></a>
+                    <a target="_blank" id="steam" href="https://steamcommunity.com/id/cheryx/"><img src="socials/steam.svg" alt="Steam" title="@cheryx"></a>
+                </div>
+            </div>
+            <div id="mizu">
+                <img src="mizuki-akiyama.gif" alt="Mizuki Akiyama">mizuki akiyama. x3
+            </div>
+            <div id="music">
+                <h3>cool songs <img src="icons/music.svg" class="t4" alt=""></h3>
+                <div id="spotify_list">
+                    <a href="https://open.spotify.com/track/4MOfm19a8JZvAEfcWJLGXV"><img src="covers/1.jpg" alt=""><span>化けの花</span></a>
+                    <a href="https://open.spotify.com/track/68peSN0i1B7SKhGkCWgeGH"><img src="covers/4.jpg" alt=""><span>熱異常</span></a>
+                    <a href="https://open.spotify.com/track/5dptcPc81FCiyCPsNvl0qu"><img src="covers/2.jpg" alt=""><span>GIRL HELL 1999</span></a>
+                    <a href="https://open.spotify.com/track/6RyCpAEHMj1nbopw1g2TsO"><img src="covers/3.jpg" alt=""><span>FUKOUNA GIRL</span></a>
+                </div>
+            </div>
+            <div>
+                <h3><img src="icons/game.svg" class="t4" alt=""> video gaymes I like:</h3>
+                <div class="border" id="gamerow">
+                    <img src="games/mc.png" height="32" alt="Minecraft" title="Minecraft">
+                    <img src="games/terraria.jpg" height="32" alt="Terraria" title="Terraria">
+                    <img src="games/celeste.jpg" height="32" alt="Celeste" title="Celeste">
+                    <img src="games/cities2.jpg" height="32" alt="Cities: Skylines II" title="Cities: Skylines II">
+                    <img src="games/factorio.jpg" height="32" alt="Factorio" title="Factorio">
+                    <img src="games/genshin.png" height="32" alt="Genshin Impact" title="Genshin Impact">
+                    <img src="games/pjsk.webp" height="32" alt="PJSK" title="PJSK">
+                    <img src="games/deltarune.jpg" height="32" alt="Deltarune" title="Deltarune">
+                    <img src="games/silksong.jpg" height="32" alt="Hollow Knight: Silksong" title="Hollow Knight: Silksong">
+                    <img src="games/oneshot.jpg" height="32" alt="Oneshot" title="Oneshot">
+                    <img src="games/stardew.jpg" height="32" alt="Stardew Valley" title="Stardew Valley">
+                    <img src="games/gd.jpg" height="32" alt="Geometry Dash" title="Geometry Dash">
+                </div>
+            </div>
+            <div id="hrt" title="Days since 2025/02/03">
+                <span>on hrt since:</span>
+                <span id="hrt_timer">█y ██m ██d</span>
+            </div>
+            <div id="likes">
+                <h3><img src="icons/star.svg" class="t4" alt=""> cool stuff:</h3>
+                <ul>  
+                    <li>trams</li>
+                    <li>trains</li>
+                    <li>public transit</li>
+                    <li>rails</li>
+                    <li>being railed</li>
+                    <li>maps</li>
+                    <li>knots</li>
+                    <li>board games</li>
+                    <li>vocaloid</li>
+                    <li>rhythm games</li>
+                    <li>d&d</li>
+                    <li>bikes</li>
+                    <li>programming</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <a id="spiral" target="_blank" href="https://limbo.akinom.dev/">
+        <span>Enter the Limbo</span>
+    </a>
+
+    <script src="perlin.js"></script>
+    <script src="background.js"></script>
+    <script src="splash_texts.js"></script>
+    <script src="menu_info.js"></script>
+    <script src="timer.js"></script>
+    <script src="spiral.js"></script>
+    <script src="typewriter.js"></script>
+    <script src="me_gallery.js"></script>
+    
+</body>
+</html>
